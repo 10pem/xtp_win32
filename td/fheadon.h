@@ -1,0 +1,16 @@
+virtual void onDisconnected(uint64_t session_id, int reason){};
+virtual void onError(dict error){};
+virtual void onOrderEvent(dict data, dict error, uint64_t session_id){};
+virtual void onTradeEvent(dict data, uint64_t session_id){};
+virtual void onCancelOrderError(dict data, dict error, uint64_t session_id){};
+virtual void onQueryOrder(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryTrade(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryPosition(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryAsset(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryStructuredFund(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryFundTransfer(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onFundTransfer(dict data, dict error, uint64_t session_id){};
+virtual void onQueryETF(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryETFBasket(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryIPOInfoList(dict data, dict error, bool last, uint64_t session_id){};
+virtual void onQueryIPOQuotaInfo(dict data, dict error, bool last, uint64_t session_id){};

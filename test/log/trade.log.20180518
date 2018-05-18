@@ -1,0 +1,147 @@
+[11:27:10.805][3096][INFO][XTP:0]api aux thread start ...
+[11:27:10.805][6508][INFO][XTP:0][init_log_file]:End: C:/Users/Bin.Xu/PycharmProjects/xtp_win32/test/log/trade.log, api version : 1.1.16.9
+[11:27:10.808][6508][INFO][XTP:0]Begin to init trader api.
+[11:27:10.808][6508][INFO][XTP:0]Begin to register service function.
+[11:27:10.808][6508][DEBUG][XTP:0]resgister service function ok(3102).
+[11:27:10.808][6508][DEBUG][XTP:0]resgister service function ok(3110).
+[11:27:10.808][6508][DEBUG][XTP:0]resgister service function ok(3114).
+[11:27:10.808][6508][DEBUG][XTP:0]resgister service function ok(3118).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3142).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3146).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3108).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3104).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(53).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(51).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(52).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(9).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3132).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3206).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3128).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3126).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3136).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3138).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3148).
+[11:27:10.809][6508][DEBUG][XTP:0]resgister service function ok(3150).
+[11:27:10.809][6508][INFO][XTP:0]End to register service function 1.
+[11:27:10.809][6508][DEBUG][XTP:0]Begin to init terminal info.
+[11:27:10.830][6508][DEBUG][XTP:0]End to init terminal info.
+[11:27:10.830][6508][DEBUG][XTP:0]Init order manager.
+[11:27:10.830][6508][DEBUG][XTP:0]order manager Initialize.
+[11:27:10.854][6508][INFO][XTP:0]Init trader api success.
+[11:28:32.972][2396][INFO][XTP:0]api aux thread start ...
+[11:28:32.972][7008][INFO][XTP:0][init_log_file]:End: C:/Users/Bin.Xu/PycharmProjects/xtp_win32/test/log/trade.log, api version : 1.1.16.9
+[11:28:32.972][7008][INFO][XTP:0]Begin to init trader api.
+[11:28:32.972][7008][INFO][XTP:0]Begin to register service function.
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3102).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3110).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3114).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3118).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3142).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3146).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3108).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3104).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(53).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(51).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(52).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(9).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3132).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3206).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3128).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3126).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3136).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3138).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3148).
+[11:28:32.972][7008][DEBUG][XTP:0]resgister service function ok(3150).
+[11:28:32.972][7008][INFO][XTP:0]End to register service function 1.
+[11:28:32.973][7008][DEBUG][XTP:0]Begin to init terminal info.
+[11:28:32.974][7008][DEBUG][XTP:0]End to init terminal info.
+[11:28:32.974][7008][DEBUG][XTP:0]Init order manager.
+[11:28:32.974][7008][DEBUG][XTP:0]order manager Initialize.
+[11:28:33.015][7008][INFO][XTP:0]Init trader api success.
+[11:28:33.016][7008][DEBUG][XTP:0]Begin to set software key : b8aa7173bba3470e390d787219b2112e.
+[11:28:33.016][7008][DEBUG][XTP:0]Begin to set software version : test.
+[11:28:33.016][7008][INFO][XTP:0]Begin to login to oms server 120.27.164.69:6001.
+[11:28:33.048][7008][DEBUG][XTP:0]Connect from oms server.
+[11:28:33.049][7008][DEBUG][XTP:0]ip is 192.168.8.105.
+[11:28:33.050][7008][DEBUG][XTP:0]Can't find account 15006722 connect count.
+[11:28:33.109][7008][DEBUG][XTP:0]Receive login info from oms server.
+[11:28:33.109][7008][DEBUG][XTP:0]Begin to receive push sequence from oms.
+[11:28:33.109][7008][DEBUG][XTP:0]End to receive push sequence 0 from oms.
+[11:28:33.109][7008][INFO][XTP:0]The server version is 1.1.16.20, start time is 20180518085929394, type is 3
+[11:28:33.109][7008][INFO][XTP:0]User reference is 628
+[11:28:33.109][7008][DEBUG][XTP:0]Can't find account 860 connect count.
+[11:28:33.109][7008][INFO][XTP:0]Begin to set trading day 20180518.
+[11:28:33.109][7008][INFO][XTP:0]End set trading day 20180518
+[11:28:33.109][7008][DEBUG][XTP:0]860 's xtp id base reference is 0.
+[11:28:33.109][7008][INFO][XTP:0]Connect to oms server 120.27.164.69:6001 success.
+[11:28:33.109][7008][INFO][XTP:0]Login to oms server 120.27.164.69:6001 success.
+[11:28:33.109][7008][DEBUG][XTP:0]Insert account 15006722:860 to hash table, the session id is 304087040.
+[11:28:33.109][6600][INFO][XTP:0]thread(api work) start...
+[11:28:33.114][6600][DEBUG][XTP:0]service(9) call time 1
+[11:28:35.112][7008][INFO][XTP:0]Begin to query asset, request id is 1.
+[11:28:35.112][7008][INFO][XTP:0]End to query asset, request id is 1.
+[11:28:35.117][6600][DEBUG][XTP:0]Receive query fund.
+[11:28:35.117][6600][INFO][XTP:0]Receive query fund success, request id is 1.
+[11:28:35.117][6600][DEBUG][XTP:0]service(3142) call time 84
+[11:28:37.113][7008][INFO][XTP:0]Begin to query position, request id is 2.
+[11:28:37.113][7008][INFO][XTP:0]End to query position, request id is 2.
+[11:28:37.117][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 82
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 20
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 45
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 21
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 22
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 26
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.118][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.118][6600][DEBUG][XTP:0]service(3146) call time 30
+[11:28:37.118][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.119][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.119][6600][DEBUG][XTP:0]service(3146) call time 835
+[11:28:37.119][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.119][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.119][6600][DEBUG][XTP:0]service(3146) call time 28
+[11:28:37.119][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.119][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 0.
+[11:28:37.119][6600][DEBUG][XTP:0]service(3146) call time 56
+[11:28:37.121][6600][DEBUG][XTP:0]Receive query position: 3146, status:0
+[11:28:37.121][6600][INFO][XTP:0]Receive query position success, request id is 2, last is 1.
+[11:28:37.121][6600][DEBUG][XTP:0]service(3146) call time 81
+[11:28:39.113][7008][INFO][XTP:0]Begin to query order  from 0 to 0, request id is 3.
+[11:28:39.113][7008][INFO][XTP:0]End to query order  from 0 to 0, request id is 3.
+[11:28:39.119][6600][DEBUG][XTP:0]Receive query order.
+[11:28:39.119][6600][INFO][XTP:0]Receive query order, xtp id is 0, quest id is 3, last is 1.
+[11:28:39.119][6600][DEBUG][XTP:0]Receive query order success.
+[11:28:39.119][6600][DEBUG][XTP:0]service(3114) call time 79
+[11:28:41.113][7008][INFO][XTP:0]Begin to query trade  from 0 to 0, request id is 4.
+[11:28:41.113][7008][INFO][XTP:0]End to query trade  from 0 to 0, request id is 4.
+[11:28:41.119][6600][DEBUG][XTP:0]Receive query trade.
+[11:28:41.119][6600][INFO][XTP:0]Receive query trade success, xtp id is 0, request id is 4, last is 1.
+[11:28:41.119][6600][DEBUG][XTP:0]service(3118) call time 55
+[11:28:43.123][7008][INFO][XTP:0]Begin to insert order 0.
+[11:28:43.123][7008][DEBUG][XTP:0]End to get xtp id is 21474837481.
+[11:28:43.123][7008][INFO][XTP:0]Insert order 36974382454670313 success.
+[11:28:43.127][6600][DEBUG][XTP:0]Receive order event 17200656180258, svr_id:34, sub_id:36, client_id:1, account_id:860, ps:1001.
+[11:28:43.127][6600][INFO][XTP:0]Receive order event, xtp id is 36974382454670313, status is 6
+[11:28:43.127][6600][DEBUG][XTP:0]close order 36974382454670313.
+[11:28:43.127][6600][DEBUG][XTP:0]Receive order event success.
+[11:28:43.127][6600][DEBUG][XTP:0]service(3102) call time 112
+[11:28:45.123][7008][INFO][XTP:0]Begin to cancel order 36974382454670313.
+[11:28:45.123][7008][DEBUG][XTP:0]End to get xtp id is 21474837482.
+[11:28:45.123][7008][INFO][XTP:0]36974382454670314 Cancel order 36974382454670313 success.
+[11:28:45.138][6600][DEBUG][XTP:0]Receive cancel order error 17217836049442, svr_id:34, sub_id:36, client_id:1, account_id:860, ps:1002.
+[11:28:45.138][6600][DEBUG][XTP:0]Receive cancel order error, xtp id is 36974382454670314, error code is 11000343.
+[11:28:45.138][6600][DEBUG][XTP:0]service(3104) call time 85
+[11:28:50.124][7008][INFO][XTP:0]Begin to logout oms server.
+[11:28:50.124][7008][INFO][XTP:0]End to logout oms server success.

@@ -1,0 +1,5 @@
+# ignore c++ project file
+*.sdf
+*.pdb
+*.pch
+*.obj

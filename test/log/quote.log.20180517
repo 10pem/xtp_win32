@@ -1,0 +1,53 @@
+[16:46:58.319][8876][INFO][XTP:0][init_log_file]:End: C:/Users/Bin.Xu/PycharmProjects/xtp_win32/test/log/quote.log, api version : 1.1.16.9
+[16:46:58.322][8876][DEBUG][XTP:0]Begin to register quote service function.
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2250).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2001).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2002).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2003).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2200).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2201).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2202).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2210).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2211).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2212).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2011).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(51).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(53).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(9).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2005).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2006).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2205).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2206).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2215).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2216).
+[16:46:58.322][8876][DEBUG][XTP:0]resgister service function ok(2012).
+[16:46:58.322][8876][DEBUG][XTP:0]End to register quote service function 1.
+[16:47:21.318][200][INFO][XTP:0][init_log_file]:End: C:/Users/Bin.Xu/PycharmProjects/xtp_win32/test/log/quote.log, api version : 1.1.16.9
+[16:47:21.318][200][DEBUG][XTP:0]Begin to register quote service function.
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2250).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2001).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2002).
+[16:47:21.318][8280][INFO][XTP:0]api aux thread start ...
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2003).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2200).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2201).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2202).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2210).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2211).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2212).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2011).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(51).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(53).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(9).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2005).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2006).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2205).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2206).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2215).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2216).
+[16:47:21.318][200][DEBUG][XTP:0]resgister service function ok(2012).
+[16:47:21.318][200][DEBUG][XTP:0]End to register quote service function 1.
+[16:47:21.327][200][INFO][XTP:0]Begin to login to quote server quote.xtphelp.com:6002.
+[16:47:31.329][200][ERROR][XTP:10200000]15006722 login to quote server quote.xtphelp.com:6002 failed.[xtp_quote_private_api.cpp:834][XTP:1]connect server failed.[xbase_login.cpp:28]
+[16:47:31.337][200][ERROR][XTP:10200301]Failed to subscribe market data with tcp: no connection.[xtp_quote_private_api.cpp:1222]
+[16:47:36.342][200][ERROR][XTP:10200301]Failed to unsubscribe market data with tcp: no connection.[xtp_quote_private_api.cpp:1280][XTP:10200301]Session failed: no connection.[xtp_quote_private_api.cpp:1223]
