@@ -3,8 +3,16 @@
 *.pdb
 *.pch
 *.obj
-*.log.*
-.idea
+*.vcxproj
+*.filters
+*.user
+
+# py
 __pycahe__
+*.pyc
+.idea
+
+# others
+*.log.*
 mdtest.py
 tdtest.py
