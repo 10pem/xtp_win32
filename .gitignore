@@ -4,5 +4,7 @@
 *.pch
 *.obj
 *.log.*
+.idea
+__pycahe__
 mdtest.py
 tdtest.py
