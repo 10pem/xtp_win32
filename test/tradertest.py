@@ -1,177 +1,133 @@
 # encoding: UTF-8
 
+import time
 import os
-from time import sleep
+import threading
+from vnxtptd import TdApi
 
-from vnxtptd import *
+def showName(func):
+    def wrapper(*args, **kwargs):
+        print('[{}] ------------------'.format(func.__name__))
+        func(*args, **kwargs)
+        print('\n')
+    return wrapper
 
-#----------------------------------------------------------------------
+
 def printDict(d):
-    """"""
-    print '-' * 50
-    l = d.keys()
-    l.sort()
-    for k in l:
-        print k, d[k]
-    
-    
+    print('------------')
+    for key, value in d.items():
+        print(key,value)
 
-########################################################################
-class TestApi(TdApi):
-    """"""
 
-    #----------------------------------------------------------------------
+class tdtest(TdApi):
     def __init__(self):
-        """Constructor"""
-        super(TestApi, self).__init__()
-    
-    #----------------------------------------------------------------------
-    def onDisconnected(self, reason):
-        """"""
-        print '-' * 30
-        print 'onDisconnected'
-        print reason
-        
-    #----------------------------------------------------------------------
-    def onError(self, data):
-        """"""
-        print '-' * 30
-        print 'onError'
-        printDict(data)
-        
-    #----------------------------------------------------------------------
-    def onOrderEvent(self, data, error):
-        """"""
-        print '-' * 30
-        print 'onOrderEvent'
-        printDict(data)
-        printDict(error)
-        
-    #----------------------------------------------------------------------
-    def onTradeEvent(self, data):
-        """"""
-        print '-' * 30
-        print 'onTradeEvent'
-        printDict(data)
-        
-    #----------------------------------------------------------------------
-    def onCancelOrderError(self, data, error):
-        """"""
-        print '-' * 30
-        print 'onCancelOrderError'
-        printDict(data)
-        printDict(error)
-        
-    #----------------------------------------------------------------------
-    def onQueryOrder(self, data, error, reqid, last):
-        """"""
-        print '-' * 30
-        print 'onQueryOrder'
-        printDict(data)
-        printDict(error) 
-        print reqid
-        print last
-        
-    #----------------------------------------------------------------------
-    def onQueryTrade(self, data, error, reqid, last):
-        """"""
-        print '-' * 30
-        print 'onQueryTrade'
-        printDict(data)
-        printDict(error)
-        print reqid
-        print last        
-        
-    #----------------------------------------------------------------------
-    def onQueryPosition(self, data, error, reqid, last):
-        """"""
-        print '-' * 30
-        print 'onQueryPosition'
-        printDict(data)
-        printDict(error)
-        print reqid
-        print last        
-        
-    #----------------------------------------------------------------------
-    def onQueryAsset(self, data, error, reqid, last):
-        """"""
-        print '-' * 30
-        print 'onQueryAsset'
-        printDict(data)
-        printDict(error)
-        print reqid
-        print last        
+        super(tdtest, self).__init__()
+        self.reqid = 0
+        self.stop = False
 
+    @showName
+    def onDisconnected(self, session, reason):
+        print('session', session)
+        print('reason', reason)
+
+    @showName
+    def onError(self, error):
+        printDict(error)
+
+    @showName
+    def onOrderEvent(self, data, error, session):
+        printDict(data)
+        printDict(error)
+        print('session', session)
+
+    @showName
+    def onTradeEvent(self, data, session):
+        printDict(data)
+        print('session', session)
+
+    @showName
+    def onCancelOrderError(self, data, error, sessio):
+        printDict(data)
+        printDict(error)
+
+    @showName
+    def onQueryPosition(self, data, error, last, session):
+        printDict(data)
+        printDict(error)
+
+    @showName
+    def onQueryAsset(self, data, error, last, session):
+        printDict(data)
+        printDict(error)
+        print('last', last)
+        print('session', session)
+
+    def conn(self, ip, port, user, password):
+        self.session = self.login(ip, port, user, password, 1)
+
+    @showName
+    def qryAsset(self):
+        while 1:
+            self.queryAsset(self.session, self.reqid)
+            self.reqid += 1
+            time.sleep(20)
+
+            if self.stop:
+                break
+
+    def stoprun(self):
+        self.stop = True
+        self.exit()
 
 
 if __name__ == '__main__':
+    client_id = 2
+    path = os.getcwd()
+
     ip = '120.27.164.69'
     port = 6001
-    user = '15006722'
-    password = 'S6bQgrl8'
+    user = ''
+    password = ''
+    key = ''
     reqid = 0
-    
-    # 创建API并初始化
-    api = TestApi()
-    
-    print('finished init')
-    
-    api.createTraderApi(1, os.getcwd())
-    
-    print ('create finished')
-    
-    api.subscribePublicTopic(0)
-    api.setSoftwareKey("b8aa7173bba3470e390d787219b2112e")
-    api.setSoftwareVersion("test")
-    
+
+    t = tdtest()
+    t.createTraderApi(client_id, path)
+
+    # 订阅流
+    t.subscribePublicTopic(0)   # 从本交易日开始重传
+    t.setSoftwareVersion('test')
+    t.setSoftwareKey(key)
+
     # 登录
-    session = api.login(ip, port, user, password, 1)
-    print 'login result', session
+    t.conn(ip, port, user, password)
 
-    # 调用同步函数查询一些信息
-    print 'trading day is:', api.getTradingDay()
-    print 'api version is:', api.getApiVersion()
-    print 'last error is:', api.getApiLastError()
-    
-    # 查询资产
-    sleep(2)
-    reqid += 1
-    n = api.queryAsset(session, reqid)
-    
+    print('session_id', t.session)
+    print('tradingDay', t.getTradingDay())
+    print('ApiVersion', t.getApiVersion())
+
+    # 查询资金线程
+    time.sleep(2)
+    th = threading.Thread(target=t.qryAsset)
+    th.start()
+    time.sleep(2)
+
+    # 发单测试
+    req = {}
+    req['order_client_id'] = 1
+    req['ticker'] = '000413'
+    req['market'] = 1   # 深圳
+    req['price'] = 8.55
+    #req['stop_price']
+    req['quantity'] = 2400
+    req['price_type'] = 1   # 限价单
+    req['side'] = 1 # 多
+    req['business_type'] = 0 # 普通股票业务
+    orderid = t.insertOrder(req, t.session)
+
     # 查询持仓
-    sleep(2)
-    reqid += 1
-    n = api.queryPosition('', session, reqid)
+    t.queryPosition('000413', t.session, t.reqid)
+    t.reqid += 1
 
-    # 查询委托
-    sleep(2)
-    reqid += 1
-    n = api.queryOrders({}, session, reqid)
-    
-    # 查询成交
-    sleep(2)
-    reqid += 1
-    n = api.queryTrades({}, session, reqid)
-    
-    # 委托
-    sleep(2)
-    order = {}
-    order['ticker'] = '000001'  # 平安银行
-    order['market'] = 1         # 深圳A股
-    order['price'] = 8.5
-    order['quantity'] = 100
-    order['price_type'] = 1     # 限价单
-    order['side'] = 1           # 买
-    
-    orderid = api.insertOrder(order,session)
-    
-    # 撤单
-    sleep(2)
-    cancelid = api.cancelOrder(orderid, session)
-    
-    # 登出
-    sleep(5)
-    print 'logout:', api.logout(session)
-    
-    # 阻塞
-    raw_input()
+    time.sleep(30)
+    t.stoprun()

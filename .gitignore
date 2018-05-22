@@ -3,3 +3,6 @@
 *.pdb
 *.pch
 *.obj
+*.log.*
+mdtest.py
+tdtest.py

@@ -3,8 +3,8 @@
 import os
 from time import sleep
 
-from vnxtpquote import QuoteApi
-#from vnxtpmd import MdApi
+#from vnxtpquote import QuoteApi
+from vnxtpmd import MdApi
 
 #----------------------------------------------------------------------
 def printDict(d):
@@ -18,7 +18,7 @@ def printDict(d):
     
 
 ########################################################################
-class TestApi(QuoteApi):
+class TestApi(MdApi):
     """"""
 
     #----------------------------------------------------------------------
@@ -62,17 +62,34 @@ class TestApi(QuoteApi):
         """"""
         pass
 
+    # -------------------------------
+    def onOrderBook(self, data):
+        """订单簿行情"""
+        printDict(data)
+
+    # -------------------------------
+    def onTickByTick(self, data):
+        """逐笔行情"""
+        printDict(data)
+
+    def onSubOrderBook(self, data, error, last):
+        printDict(data)
+        printDict(error)
+        print(last)
+
+
 
 if __name__ == '__main__':
     ip = '120.27.164.138'
     port = 6002
-    user = '15006722'
-    password = 'S6bQgrl8'
+    user = ''
+    password = ''
     
     # 创建API并初始化
     api = TestApi()
     
-    api.createQuoteApi(1, os.getcwd())
+    # 传入客户端号 和 log地址
+    api.createQuoteApi(2, os.getcwd())
     
     print 'create finished'
     
@@ -81,11 +98,16 @@ if __name__ == '__main__':
     print 'login result', n    
     
     # 订阅行情
-    api.subscribeMarketData('000001', 2)
+    #api.subscribeMarketData('000001', 2)
     
     # 取消订阅
-    sleep(5)
-    api.unSubscribeMarketData('000001', 1)    
+    #sleep(5)
+    #api.unSubscribeMarketData('000001', 1)    
     
+    # 订阅行情订单簿
+    #api.subscribeOrderBook('000001', 2)
+    #api.subscribeTickByTick('000413', 2)
+
+
     # 阻塞
     raw_input()

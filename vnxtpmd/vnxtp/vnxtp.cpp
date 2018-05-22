@@ -832,9 +832,35 @@ void MdApi::processTickByTick(Task *task)
 		XTPTBT *task_data = (XTPTBT*)task->task_data;
 		data["exchange_id"] = task_data->exchange_id;
 		data["ticker"] = task_data->ticker;
-		data["seq"] = task_data->seq;
+		//data["seq"] = task_data->seq;
 		data["data_time"] = task_data->data_time;
 		data["type"] = task_data->type;
+
+		if (task_data->type == XTP_TBT_ENTRUST)
+		{
+			XTPTickByTickEntrust *data_entrust = task_data->entrust;
+			data["channel_no"] = data_entrust->channel_no;
+			data["seq"] = data_entrust->seq;
+			data["price"] = data_entrust->price;
+			data["qty"] = data_entrust->qty;
+			data["side"] = data_entrust->side;
+			data["ord_type"] = data_entrust->ord_type;
+			delete data_entrust;
+		}
+		else
+		{
+			XTPTickByTickTrade *data_trade = task_data->trade;
+			data["channel_no"] = data_trade->channel_no;
+			data["seq"] = data_trade->seq;
+			data["price"] = data_trade->price;
+			data["qty"] = data_trade->qty;
+			data["money"] = data_trade->money;
+			data["bid_no"] = data_trade->bid_no;
+			data["ask_no"] = data_trade->ask_no;
+			data["trade_flag"] = data_trade->trade_flag;
+			delete data_trade;
+		}
+		
 		delete task->task_data;
 	}
 
